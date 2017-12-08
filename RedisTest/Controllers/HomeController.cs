@@ -13,11 +13,6 @@ namespace RedisTest.Controllers
     {
         public IDatabase Redis => RedisConnection.RedixDatabase;
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
         public IActionResult Delete(string key)
         {
             if (!Redis.KeyExists(key))
